@@ -1,0 +1,97 @@
+body {
+  font-family: Tahoma, sans-serif;
+  direction: rtl;
+  background: #f0f4f8;
+  padding: 30px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2, h3 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.form-container {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+input {
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1.8px solid #bbb;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+input:focus {
+  border-color: #4a90e2;
+}
+
+button {
+  padding: 12px 0;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submitBtn {
+  background-color: #4a90e2;
+  color: white;
+}
+
+
+
+#deleteBtn {
+  background-color: #e74c3c;
+  color: white;
+  margin-top: 10px;
+}
+
+table {
+  width: 650px;
+  max-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+thead th {
+  background: #757575;
+  color: white;
+  padding: 14px 20px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+}
+
+tbody tr {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+}
+
+tbody td {
+  text-align: center;
+  padding: 12px 18px;
+  font-size: 15px;
+  color: #333;
+}
+
+.empty-row td {
+  color: #888;
+  font-style: italic;
+}

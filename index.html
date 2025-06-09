@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+</html>
+<head>
+  <meta charset="UTF-8" />
+  <title>document</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  <h3>فرم ثبت‌نام:</h3>
+  <div class="form-container">
+    <input type="text" id="nameInput" placeholder="نام و نام‌خانوادگی" />
+    <input type="text" id="gradeInput" placeholder="پایه تحصیلی" />
+    <input type="text" id="schoolInput" placeholder="نام مدرسه" />
+    <button id="submitBtn">ثبت</button>
+    <button id="deleteBtn" type="button">حذف</button> 
+  </div>
+
+  <h2>لیست ثبت‌نام کتاب دانش‌آموزان</h2>
+
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>نام و نام‌خانوادگی</th>
+        <th>پایه تحصیلی</th>
+        <th>نام مدرسه</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="empty-row">
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="app/app.js"></script>
+</body>
+</html>
