@@ -7,9 +7,14 @@ const tableBody = document.querySelector("#studentTable tbody");
 let students = [];
 
 submitBtn.addEventListener("click", function () {
-  const name = nameInput.value;
-  const grade = gradeInput.value;
-  const school = schoolInput.value;
+  const name = nameInput.value.trim();
+  const grade = gradeInput.value.trim();
+  const school = schoolInput.value.trim();
+
+  if (name === "" || grade === "" || school === "") {
+    alert("لطفاً فرم را کامل پر کنید");
+    return;
+  }
 
   students.push({ name, grade, school });
   renderTable();
@@ -26,20 +31,35 @@ function renderTable() {
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
     `;
   } else {
     tableBody.innerHTML = "";
-    students.forEach(function (value, index) {
+
+    students.forEach(function (student, index) {
       const row = document.createElement("tr");
 
       row.innerHTML = `
         <td>${student.name}</td>
         <td>${student.grade}</td>
         <td>${student.school}</td>
+        <td>
+          <i class="fas fa-trash delete-icon" data-index="${index}" style="color: red; cursor: pointer;"></i>
+        </td>
       `;
 
       tableBody.appendChild(row);
+    });
+
+    const deleteIcons = document.querySelectorAll(".delete-icon");
+    deleteIcons.forEach(function (icon) {
+      icon.addEventListener("click", function (event) {
+        event.preventDefault();
+        const index = this.getAttribute("data-index");
+        students.splice(index, 1);
+        renderTable();
+      });
     });
   }
 }
